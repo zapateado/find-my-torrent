@@ -4,8 +4,8 @@ import Form from 'react-bootstrap/Form';
 import { useLocation } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 
-// const domainName = "";
-const localDomainName = "http://localhost:5555";
+const domainName = "https://fmt-service.herokuapp.com";
+// const localDomainName = "http://localhost:5555";
 
 const Torrents = () => {
     const [torrents, setTorrents] = useState([]);
@@ -13,7 +13,7 @@ const Torrents = () => {
 
     useEffect(() => {
         const searchParams = new URLSearchParams(params);
-        fetch(`${localDomainName}/search?` + searchParams.toString())
+        fetch(`${domainName}/search?` + searchParams.toString())
         .then(res => res.json())
         .then(res => setTorrents(res))
         .catch(err => console.log(err));
