@@ -23,13 +23,13 @@ const App = () => {
     <Router>
       <Header />
         <Switch>
-          <Route path="/about">
+          <Route exact path="/about">
             <Wrapper>
               <About />
             </Wrapper>
           </Route>
 
-          <Route path="/feedback">
+          <Route exact path="/feedback">
             <Wrapper>
               <Feedback />
             </Wrapper>
@@ -41,7 +41,7 @@ const App = () => {
             </Wrapper>
           </Route>
 
-          <Route path="/search">
+          <Route exact path="/search">
             <Wrapper>
               <Torrents />
             </Wrapper>
